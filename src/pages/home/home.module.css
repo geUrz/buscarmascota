@@ -1,0 +1,40 @@
+.img{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.img img{
+  width: 100%;
+  height: 620px;
+}
+
+.titleImg{
+  padding: 0 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: rgba(0, 0, 0, .6);
+}
+
+.titleImg h1{
+  font-size: 46px;
+  font-family: 'Impact' !important;
+  text-align: center;
+  color: var(--clrGY0);
+  text-transform: capitalize;
+}
+
+.titleImg h2{
+  font-size: 24px;
+  text-align: center;
+  text-transform: capitalize;
+}
