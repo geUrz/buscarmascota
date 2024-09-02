@@ -18,6 +18,7 @@
     "lodash": "^4.17.21",
     "mysql2": "^3.11.0",
     "next": "14.2.6",
+    "next-cloudinary": "^6.11.0",
     "onesignal-cordova-plugin": "^5.2.4",
     "qrcode": "^1.5.4",
     "react": "^18",

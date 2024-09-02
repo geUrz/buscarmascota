@@ -3,13 +3,21 @@ import { useRouter } from 'next/router'
 import { useAuth } from '@/contexts/AuthContext'
 import Link from 'next/link'
 import { Image } from 'semantic-ui-react'
-import { FaCloudUploadAlt, FaHandHoldingUsd, FaHome, FaList, FaPaw, FaQuestionCircle, FaSignOutAlt, FaTimes, FaUser, FaUserCircle } from 'react-icons/fa'
+import { FaBars, FaCloudUploadAlt, FaHandHoldingUsd, FaHome,  FaQuestionCircle, FaSearch, FaSignOutAlt, FaTimes,FaUser, FaUserCircle, FaLayerGroup, FaPaw } from 'react-icons/fa'
 import styles from './TopBar.module.css'
+import { SearchNegocios } from '../SearchNegocios'
+import { NegocioList } from '../NegocioList/NegocioList.js'
 
 
 export function TopBar() {
 
   const { user, logout } = useAuth()
+
+  const [search, setSearch] = useState(false)
+
+  const onOpenCloseSearch = () => setSearch((prevState) => !prevState)
+
+  const [resultados, setResultados] = useState([])
 
   const router = new useRouter()
 
@@ -28,18 +36,43 @@ export function TopBar() {
           <Image src='/img/buscarmascota.webp' />
         </div>
 
+        {!search ? (
+          ''
+        ) : (
+          <div className={styles.searchMain}>
+            <SearchNegocios onResults={setResultados} onOpenCloseSearch={onOpenCloseSearch} />
+            {resultados.length > 0 && (
+              <NegocioList negocios={resultados} />
+            )}
+          </div>
+        )}
+
         <div className={styles.menu}>
+
+        {!search ? (
+            <div className={styles.iconSearch} onClick={onOpenCloseSearch}>
+              <FaSearch />
+            </div>
+          ) : (
+            ''
+          )}
+
           <Link href='/'>
             <FaHome /> Home
           </Link>
           <Link href='/categorias'>
-            <FaList /> Categorias
+            <FaLayerGroup /> Categorias
           </Link>
           <Link href='/registro'>
-            <FaCloudUploadAlt /> Publicar Negocio
+            <FaCloudUploadAlt /> Registrar mascota
           </Link>
           <Link href='/nosotros'>
-            ¿ Qué es <br></br>Mi Negocio en Línea ?
+            <FaQuestionCircle />
+            ¿ Qué es Buscar Mascota ?
+          </Link>
+          <Link href='/donar'>
+            <FaHandHoldingUsd />
+            ¡ Quiero donar !
           </Link>
           <div className={styles.iconUser}
             onClick={user ? (
@@ -58,6 +91,13 @@ export function TopBar() {
         </div>
 
         <div className={styles.iconBar}>
+          {!search ? (
+            <div className={styles.iconSearch} onClick={onOpenCloseSearch}>
+              <FaSearch />
+            </div>
+          ) : (
+            ''
+          )}
           <div onClick={menuOpen}>
             {menu ? (
               <FaTimes />
@@ -95,21 +135,21 @@ export function TopBar() {
             </Link>
             <Link href='/categorias'>
               <div onClick={menuOpen}>
-                <FaList /> Categorias
+                <FaLayerGroup /> Categorias
               </div>
             </Link>
             <Link href='/registro'>
               <div onClick={menuOpen}>
-                <FaCloudUploadAlt /> Publicar Negocio
+                <FaCloudUploadAlt /> Registrar mascota
               </div>
             </Link>
             <Link href='/nosotros'>
               <div onClick={menuOpen}>
                 <FaQuestionCircle />
-                Que es Buscar Mascota?
+                Qué es Buscar Mascota ?
               </div>
             </Link>
-            <Link href='/donacion'>
+            <Link href='/donar'>
               <div onClick={menuOpen}>
                 <FaHandHoldingUsd />
                 ¡ Quiero donar !
@@ -119,17 +159,17 @@ export function TopBar() {
 
           {!user ? (
             ''
-          ): (
-              <div className = {styles.mainSignOut}>
-          <div className={styles.boxSignOut} onClick={logout}>
-            <FaSignOutAlt />
-          </div>
-        </div>
+          ) : (
+            <div className={styles.mainSignOut}>
+              <div className={styles.boxSignOut} onClick={logout}>
+                <FaSignOutAlt />
+              </div>
+            </div>
           )}
 
-      </div>
+        </div>
 
-    </div >
+      </div>
 
 
     </>

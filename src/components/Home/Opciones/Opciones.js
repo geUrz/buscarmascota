@@ -10,19 +10,19 @@ export function Opciones() {
         <div className={styles.card}>
           <Image src='/img/donarpet.webp' />
           <h1>Donar</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipiscing elit conubia, sociosqu netus luctus sollicitudin.</p>
+          <p>Buscamos un nuevo hogar para nuestra mascota, donde pueda recibir el afecto y la atención que merece.</p>
         </div>
 
         <div className={styles.card}>
           <Image src='/img/adoptarpet.webp' />
           <h1>Adoptar</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipiscing elit conubia, sociosqu netus luctus sollicitudin.</p>
+          <p>En busca de una mascota que se convierta en un amigo fiel y parte de la familia.</p>
         </div>
 
         <div className={styles.card}>
           <Image src='/img/recuperarpet.webp' />
           <h1>Recuperar</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipiscing elit conubia, sociosqu netus luctus sollicitudin.</p>
+          <p>Te ayudamos a buscar tu mascota perdida.</p>
         </div>
       </div>
     </div>

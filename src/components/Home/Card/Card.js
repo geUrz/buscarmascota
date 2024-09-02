@@ -1,23 +1,24 @@
 import { FaCat, FaDog, FaDragon } from 'react-icons/fa'
 import styles from './Card.module.css'
+import Link from 'next/link'
 
 export function Card() {
   return (
 
     <div className={styles.main}>
       <div className={styles.section}>
-        <div className={styles.card}>
+        <Link href='/perros' className={styles.card}>
           <FaDog />
           <h1>Perros</h1>
-        </div>
-        <div className={styles.card}>
+        </Link>
+        <Link href='/gatos' className={styles.card}>
           <FaCat />
           <h1>Gatos</h1>
-        </div>
-        <div className={styles.card}>
+        </Link>
+        <Link href='/otros' className={styles.card}>
           <FaDragon />
           <h1>Otros</h1>
-        </div>
+        </Link>
       </div>
     </div>
 

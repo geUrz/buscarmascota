@@ -29,11 +29,16 @@
   background-color: azure;
   border-radius: 5px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: all .5s;
   cursor: pointer;
 }
 
 .card:hover{
   background-color: var(--clrGR2);
+}
+
+.card:active{
+  background-color: var(--clrGR3);
 }
 
 .card svg, .card path{
@@ -48,4 +53,35 @@
   font-family: 'Bebas' !important;
   color: var(--bg2);
   cursor: pointer;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+
+  .card{
+    margin: 0 10px;
+  }
+
+}
+
+@media screen and (min-width: 1024px){
+
+  .main{ 
+    bottom: -60px;
+  }
+
+  .card{
+    width: 180px;
+    height: 180px;
+    margin: 0 40px;
+  }
+
+  .card svg, .card path{
+    font-size: 54px;
+  }
+  
+  .card h1{
+    margin-top: 12px;
+    font-size: 22px;
+  }
+
 }

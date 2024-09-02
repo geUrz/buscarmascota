@@ -25,7 +25,7 @@ export function Footer(props) {
           </div>
 
           <div className={styles.copy}>
-            <h4>&copy; 2024 BUSCAR MASCOTA</h4>
+            <h4>&copy; 2024 MI NEGOCIO EN LÍNEA</h4>
           </div>
 
         </div>

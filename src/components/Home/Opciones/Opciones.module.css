@@ -17,13 +17,13 @@
 }
 
 .card{
-  margin: 30px 0;
+  margin: 30px 20px;
   width: 320px;
   height: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .card img{
@@ -31,14 +31,45 @@
 }
 
 .card h1{
-  margin-top: 14px;
+  margin-top: 24px;
   font-size: 28px;
   font-family: 'Bebas' !important;
-  color: azure;
+  color: var(--bg2);
 }
 
 .card p{
   font-size: 20px;
   text-align: center;
   color: azure;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+
+  .section{
+    margin-top: 130px;
+  }
+
+}
+
+@media screen and (min-width: 1024px){
+
+  .section{
+    margin-top: 180px;
+  }
+
+  .card{
+    margin: 50px 30px;
+    width: 420px;
+    height: 280px;
+  }
+
+  .card h1{
+    margin-top: 32px;
+    font-size: 32px;
+  }
+  
+  .card p{
+    font-size: 24px;
+  }
+
 }

@@ -13,15 +13,15 @@
 
 .iconClose svg, .iconClose path{
   font-size: 26px;
-  color: var(--clrBL0);
+  color: black;
   border-radius: 50%;
   cursor: pointer;
 }
 
 .iconClose:hover,.iconClosehover{
-  background-color: var(--clrGR0);
+  background-color: var(--clrGR1);
 }
 
 .iconClose:active,.iconClose:active{
-  background-color: var(--clrGR1);
+  background-color: var(--clrGR2);
 }

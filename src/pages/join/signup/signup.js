@@ -154,7 +154,7 @@ export default function Signup() {
             </FormField>
           </FormGroup>
           {error && <p className={styles.error}>{error}</p>}
-          <Button primary type='submit'>Crear</Button>
+          <Button secondary type='submit'>Crear</Button>
         </Form>
 
         <div className={styles.link}>

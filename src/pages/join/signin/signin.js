@@ -101,7 +101,7 @@ export default function Signin() {
               </FormField>
             </FormGroup>
             {error && <p className={styles.error}>{error}</p>}
-            <Button primary type='submit'>Iniciar sesión</Button>
+            <Button secondary type='submit'>Iniciar sesión</Button>
           </Form>
 
           <div className={styles.link}>

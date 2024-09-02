@@ -1,5 +1,5 @@
 .iconArrow{
-  padding: 10px 15px;
+  padding: 20px 15px;
   width: 100%;
   height: auto;
   display: flex;
@@ -28,7 +28,7 @@
 }
 
 .iconArrow svg, .iconArrow path{
-  font-size: 24px;
+  font-size: 28px;
   color: gray;
   cursor: pointer;
 }
@@ -36,7 +36,7 @@
 .iconArrow h1{
   margin-left: 5px;
   color: gray;
-  font-size: 14px;
-  font-weight: 600 !important;
+  font-size: 24px;
+  font-family: 'Bebas' !important;
   text-transform: capitalize;
 }
