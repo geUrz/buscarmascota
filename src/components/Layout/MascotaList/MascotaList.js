@@ -1,12 +1,12 @@
 import { map, size } from 'lodash'
-import { ListEmpty } from '../../ListEmpty'
-import { Loading } from '../../Loading'
-import styles from './NegocioList.module.css'
+import { ListEmpty } from '../ListEmpty'
+import { Loading } from '../Loading'
 import Link from 'next/link'
 import { FaStoreAlt } from 'react-icons/fa'
 import { Image } from 'semantic-ui-react'
+import styles from './MascotaList.module.css'
 
-export function NegocioList(props) {
+export function MascotaList(props) {
 
   const { negocios, onOpenCloseSearch } = props
   

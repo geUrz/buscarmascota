@@ -3,10 +3,10 @@ import { useRouter } from 'next/router'
 import { useAuth } from '@/contexts/AuthContext'
 import Link from 'next/link'
 import { Image } from 'semantic-ui-react'
-import { FaBars, FaCloudUploadAlt, FaHandHoldingUsd, FaHome,  FaQuestionCircle, FaSearch, FaSignOutAlt, FaTimes,FaUser, FaUserCircle, FaLayerGroup, FaPaw } from 'react-icons/fa'
+import { FaCloudUploadAlt, FaHandHoldingUsd, FaHome,  FaQuestionCircle, FaSearch, FaSignOutAlt, FaTimes,FaUser, FaUserCircle, FaLayerGroup, FaPaw } from 'react-icons/fa'
+import { SearchNegocios } from '../SearchMascotas'
+import { MascotaList } from '../MascotaList'
 import styles from './TopBar.module.css'
-import { SearchNegocios } from '../SearchNegocios'
-import { NegocioList } from '../NegocioList/NegocioList.js'
 
 
 export function TopBar() {
@@ -42,7 +42,7 @@ export function TopBar() {
           <div className={styles.searchMain}>
             <SearchNegocios onResults={setResultados} onOpenCloseSearch={onOpenCloseSearch} />
             {resultados.length > 0 && (
-              <NegocioList negocios={resultados} />
+              <MascotaList negocios={resultados} />
             )}
           </div>
         )}

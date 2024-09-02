@@ -9,7 +9,7 @@ import Link from 'next/link'
 import { ArrowBack } from '@/components/Layout/ArrowBack'
 import { Image } from 'semantic-ui-react'
 
-export default function Negocio() {
+export default function Mascota() {
   const router = useRouter()
   const { slug } = router.query
 

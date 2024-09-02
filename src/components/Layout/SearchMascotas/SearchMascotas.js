@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import styles from './SearchNegocios.module.css';
 import { Input } from 'semantic-ui-react';
-import { NegocioList } from '../NegocioList/NegocioList.js';
-import { FaSearch, FaTimesCircle } from 'react-icons/fa';
+import { FaTimesCircle } from 'react-icons/fa';
+import styles from './SearchMascotas.module.css';
+import { MascotaList } from '../MascotaList';
 
-export function SearchNegocios(props) {
+export function SearchMascotas(props) {
 
-  const {onResults, onOpenCloseSearch} = props
+  const {onOpenCloseSearch} = props
 
   const [query, setQuery] = useState('');
   const [loading, setLoading] = useState(false);
@@ -25,7 +25,7 @@ export function SearchNegocios(props) {
       setError('');
 
       try {
-        const response = await axios.get(`/api/negocios/negocios?search=${query}`);
+        const response = await axios.get(`/api/mascotas/mascotas?search=${query}`);
         setNegocios(response.data);
       } catch (err) {
         setError('No se encontraron negocios');
@@ -59,7 +59,7 @@ export function SearchNegocios(props) {
         {error && <p>{error}</p>}
         {negocios.length > 0 && (
           <div className={styles.resultsContainer}>
-            <NegocioList negocios={negocios} onOpenCloseSearch={onOpenCloseSearch} />
+            <MascotaList negocios={negocios} onOpenCloseSearch={onOpenCloseSearch} />
           </div>
         )}
       </div>
